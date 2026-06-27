@@ -1,0 +1,29 @@
+.gallery-page {
+  padding: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background: white;
+  border: 1px solid #bfdbfe;
+  padding: 1rem;
+  border-radius: 18px;
+  margin: 0rem 0rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}

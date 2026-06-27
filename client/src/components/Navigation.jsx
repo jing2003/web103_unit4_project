@@ -1,21 +1,30 @@
-import React from 'react'
-import '../App.css'
-import '../css/Navigation.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "../css/navbar.css";
 
 const Navigation = () => {
-    return (
-        <nav>
-            <ul>
-                <li><h1>Bolt Bucket 🏎️</h1></li>
-            </ul>
+  return (
+    <nav className="navbar">
+      <ul>
+        <li>
+          <h1>Furina Custom Studio</h1>
+        </li>
+      </ul>
 
-            <ul>
-                <li><a href='/' role='button'>Customize</a></li>
-                <li><a href='/customcars' role='button'>View Cars</a></li>
-            </ul>
-            
-        </nav>
-    )
-}
+      <ul>
+        <li>
+          <Link to="/create">
+            <button>Create</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <button>Gallery</button>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Navigation
+export default Navigation;

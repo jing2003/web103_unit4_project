@@ -1,41 +1,43 @@
-import React from 'react'
-import { useRoutes } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import ViewCars from './pages/ViewCars'
-import EditCar from './pages/EditCar'
-import CreateCar from './pages/CreateCar'
-import CarDetails from './pages/CarDetails'
-import './App.css'
+import React from "react";
+import Navigation from "./components/Navigation";
+import { useRoutes } from "react-router-dom";
+import Gallery from "./pages/Gallery";
+import CreateFurina from "./pages/CreateFurina";
+import FurinaDetails from "./pages/FurinaDetails";
+import EditFurina from "./pages/EditFurina";
+import NotFound from "./pages/NotFound";
+import "./App.css";
 
 const App = () => {
   let element = useRoutes([
     {
-      path: '/',
-      element: <CreateCar title='BOLT BUCKET | Customize' />
+      path: "/",
+      element: <Gallery title="Furina Custom Studio" />,
     },
     {
-      path:'/customcars',
-      element: <ViewCars title='BOLT BUCKET | Custom Cars' />
+      path: "/create",
+      element: <CreateFurina title="Furina CS | Custom Furina" />,
     },
     {
-      path: '/customcars/:id',
-      element: <CarDetails title='BOLT BUCKET | View' />
+      path: "/furinas/:id",
+      element: <FurinaDetails title="Furina CS | View Furina" />,
     },
     {
-      path: '/edit/:id',
-      element: <EditCar title='BOLT BUCKET | Edit' />
-    }
-  ])
+      path: "/furinas/:id/edit",
+      element: <EditFurina title="Furina CS | Edit Furina" />,
+    },
+    {
+      path: "*",
+      element: <NotFound title="Furina CS | 404 Not Found" />,
+    },
+  ]);
 
   return (
-    <div className='app'>
-
+    <div>
       <Navigation />
-
-      { element }
-
+      {element}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
