@@ -4,7 +4,7 @@ Submitted by: **Jingyi He**
 
 About this web app: **Furina Custom Studio is a React web app where users can create and save custom Furina designs by choosing her alignment outfit, pose, expression, and background. The app updates the visual preview and total price dynamically, saves designs to a PostgreSQL database, and allows users to view, edit, or delete their saved creations.**
 
-Time spent: **X** hours
+Time spent: **6.8** hours
 
 ## Required Features
 
